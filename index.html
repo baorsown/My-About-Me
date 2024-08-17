@@ -6,8 +6,7 @@
   <title>Trần Bảo Sơn </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./resource/main.css">
-  <link rel="stylesheet" href="https://baorsown.github.io/assets/style.css">
-  <link rel="stylesheet" href="https://github.com/baorsown/My-About/blob/main/assets/style.css">
+  <link rel="stylesheet" href="./resource/reponsive.css">
 
 </head>
 <body>
@@ -22,7 +21,8 @@
           <ul class="menu flex">
             <li><a href="#">Trang chủ </a></li>
             <li><a href="#about">Thông tin </a></li>
-            <li><a href="">Sở Thích</a></li>
+            <li><a href="#like">Sở Thích</a></li>
+            <li><a href="#like">Kỹ Năng</a></li>
           </ul>
         </div>
       </div>
@@ -56,8 +56,10 @@
       </div>
 
       <div class="button-account">
-        <button type="submit" class="viewportfolio">View Portfolio</button>
-        <button type="submit" class="follow">+ Follow</button>
+        <div id="customAlert">Cảm ơn bạn đã theo dõi!</div>
+        
+        <button type="button" class="follow" onclick="toggleFollow(this)">+ Follow</button>
+       
       </div>
     </div>
   </div>
@@ -72,7 +74,7 @@
         
   <div class="content-about">
    <p id="shortContent" class="title-color">
-      Tôi là sinh viên công nghệ thông tin sống ở Thành phố Hồ Chí Minh, chuyên về thiết kế trải nghiệm người dùng (UX/UI). Tôi luôn nỗ lực học hỏi và phát triển, và không ngại khám phá những điều mới mẻ.
+    Tôi là sinh viên công nghệ thông tin sống tại Thành phố Hồ Chí Minh, với niềm đam mê đặc biệt dành cho thiết kế trải nghiệm người dùng (UX/UI). Tôi luôn nỗ lực không ngừng để mở rộng kiến thức và kỹ năng của mình trong lĩnh vực công nghệ. 
    </p>
   
    <p class="title-about">
@@ -81,7 +83,7 @@
    </p>
   
     <p id="moreContent" class="title-color">
-      Tôi là sinh viên công nghệ thông tin sống tại Thành phố Hồ Chí Minh, với niềm đam mê đặc biệt dành cho thiết kế trải nghiệm người dùng (UX/UI). Tôi luôn nỗ lực không ngừng để mở rộng kiến thức và kỹ năng của mình trong lĩnh vực công nghệ. Bên cạnh đó, tôi luôn tìm kiếm những cơ hội học hỏi, phát triển bản thân, và sẵn sàng thử thách bản thân trong những dự án mới mẻ và sáng tạo. Với tinh thần ham học hỏi, tôi không ngừng khám phá những xu hướng công nghệ mới và áp dụng chúng vào các dự án thực tế.
+      Bên cạnh đó, tôi luôn tìm kiếm những cơ hội học hỏi, phát triển bản thân, và sẵn sàng thử thách bản thân trong những dự án mới mẻ và sáng tạo. Với tinh thần ham học hỏi, tôi không ngừng khám phá những xu hướng công nghệ mới và áp dụng chúng vào các dự án thực tế.
     </p>
     <p class="title-about">
       <a id="hideBtn">Ẩn đi</a>
@@ -120,14 +122,14 @@
     </div>
   </section>
 
-  <section class="section-2 flex">
+  <section class="section-2 flex container-lg container-md">
     <div class="section-container flex">
-      <div class="section-title">
+      <div  id="like" class="section-title">
           Sở Thích
       </div>
 
       <div class="section-body flex flex-wrap">
-        <div class="card">
+        <div class="card s-col-ful">
           <div class="card-inner">
             <div class="card-header flex">
               <div class="card-icon flex">
@@ -138,11 +140,11 @@
                 <p class="color-subheadings">Travel</p>
               </div>
             </div>
-            <div id="shortContents" class="title-color">
+            <div id="shortContents w-60" class="title-color">
               Tôi có niềm đam mê với du lịch, đặc biệt thích khám phá những địa điểm mới lạ,
             </div>
-            <p id="moreContents" class="title-color" style="display: none;">
-              Tôi có niềm đam mê với du lịch, đặc biệt thích khám phá những địa điểm mới lạ, hòa mình vào thiên nhiên và tìm hiểu văn hóa địa phương. Mỗi chuyến đi đều mang lại cho tôi những trải nghiệm thú vị và những bài học quý giá về cuộc sống.
+            <p id="moreContents w-60" class="title-color" style="display: none;">
+               hòa mình vào thiên nhiên và tìm hiểu văn hóa địa phương. Mỗi chuyến đi đều mang lại cho tôi những trải nghiệm thú vị và những bài học quý giá về cuộc sống.
             </p>
             <div class="card-footer">
               
@@ -156,7 +158,7 @@
            
           </div>
         </div>
-        <div class="card">
+        <div class="card s-col-ful">
           <div class="card-inner">
             <div class="card-header flex">
               <div class="card-icon flex">
@@ -171,7 +173,7 @@
               Tôi đam mê công nghệ và luôn hứng thú với các xu hướng mới trong lĩnh vực này. Từ lập trình và phát triển phần mềm
             </div>
             <p id="moreContents-1" class="title-color" style="display: none;">
-              Tôi đam mê công nghệ và luôn hứng thú với các xu hướng mới trong lĩnh vực này. Từ lập trình và phát triển phần mềm đến thiết kế giao diện người dùng, tôi không ngừng tìm hiểu và áp dụng công nghệ để tạo ra các giải pháp sáng tạo. Công nghệ giúp tôi mở rộng kỹ năng và khám phá những cơ hội mới, làm việc với các dự án thú vị và cải thiện hiệu quả công việc.
+              đến thiết kế giao diện người dùng, tôi không ngừng tìm hiểu và áp dụng công nghệ để tạo ra các giải pháp sáng tạo. Công nghệ giúp tôi mở rộng kỹ năng và khám phá những cơ hội mới, làm việc với các dự án thú vị và cải thiện hiệu quả công việc.
             </p>
             <div class="card-footer">
               
@@ -184,6 +186,132 @@
             </div>
           </div>
         </div>
+        <div class="card s-col-ful ">
+          <div class="card-inner ">
+            <div class="card-header flex">
+              <div class="card-icon flex">
+                <i class="fa-solid fa-music"></i>
+              </div>
+              <div class="card-title">
+                <p class="color-headline">Nghe Nhạc</p>
+                <p class="color-subheadings">Music</p>
+              </div>
+            </div>
+            <div id="shortContents-2" class="title-color">
+              Tôi có niềm đam mê với âm nhạc, đặc biệt là khi nghe nhạc giúp tôi thư giãn và tập trung hơn. 
+            </div>
+            <p id="moreContents-2" class="title-color" style="display: none;">
+              Âm nhạc là nguồn cảm hứng lớn, giúp tôi khám phá những cảm xúc mới và tìm thấy sự sáng tạo trong công việc cũng như cuộc sống hàng ngày. Dù là những giai điệu nhẹ nhàng hay sôi động, tôi luôn tìm được sự kết nối và niềm vui trong từng bản nhạc.
+            </p>
+            <div class="card-footer">
+              
+              <p id="readMoreSections-2">
+                <a id="readMoreBtns-2" href="javascript:void(0)">Hiện thêm</a>
+              </p>
+              <p id="hideSections-2" style="display: none;">
+                <a id="hideBtns-2" href="javascript:void(0)">Ẩn đi</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card s-col-ful ">
+          <div class="card-inner ">
+            <div class="card-header flex">
+              <div class="card-icon flex">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <div class="card-title">
+                <p class="color-headline">Xem phim</p>
+                <p class="color-subheadings">Music</p>
+              </div>
+            </div>
+            <div id="shortContents-3" class="title-color">
+              Tôi có niềm đam mê với âm nhạc, đặc biệt là khi nghe nhạc giúp tôi thư giãn và tập trung hơn. 
+            </div>
+            <p id="moreContents-3" class="title-color" style="display: none;">
+              Âm nhạc là nguồn cảm hứng lớn, giúp tôi khám phá những cảm xúc mới và tìm thấy sự sáng tạo trong công việc cũng như cuộc sống hàng ngày. Dù là những giai điệu nhẹ nhàng hay sôi động, tôi luôn tìm được sự kết nối và niềm vui trong từng bản nhạc.
+            </p>
+            <div class="card-footer">
+              
+              <p id="readMoreSections-3">
+                <a id="readMoreBtns-3" href="javascript:void(0)">Hiện thêm</a>
+              </p>
+              <p id="hideSections-3" style="display: none;">
+                <a id="hideBtns-3" href="javascript:void(0)">Ẩn đi</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+  </section>
+  <section class="section-2 flex container-lg container-md" >
+    <div class="section-container flex">
+      <div  id="Skill" class="section-title">
+          Kỹ  Năng 
+      </div>
+
+      <div class="section-body flex flex-wrap">
+        <div class="card s-col-ful">
+          <div class="card-inner">
+            <div class="card-header flex">
+              <div class="card-icon flex">
+                <i class="fa-brands fa-edge"></i>
+              </div>
+              <div class="card-title">
+                <p class="color-headline">Web</p>
+                <p class="color-subheadings">website</p>
+              </div>
+            </div>
+            <div id="shortContents-4" class="title-color">
+              Tôi có khả năng lập trình web cơ bản, nắm vững các ngôn ngữ như HTML, CSS và JavaScript. Với những kỹ năng này, tôi có thể xây dựng các trang web có cấu trúc rõ ràng, giao diện trực quan và tương tác tốt
+            </div>
+            <p id="moreContents-4" class="title-color" style="display: none;">
+              Tôi cũng hiểu về thiết kế web đáp ứng (responsive design) để đảm bảo trang web hiển thị tốt trên mọi thiết bị từ máy tính đến điện thoại di động.
+            </p>
+            <div class="card-footer">
+              
+              <p id="readMoreSections-4">
+                <a id="readMoreBtns-4" href="javascript:void(0)">Hiện thêm</a>
+              </p>
+              <p id="hideSections-4" style="display: none;">
+                <a id="hideBtns-4" href="javascript:void(0)">Ẩn đi</a>
+              </p>
+            </div>
+           
+          </div>
+        </div>
+        <div class="card s-col-ful">
+          <div class="card-inner">
+            <div class="card-header flex">
+              <div class="card-icon flex">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div class="card-title">
+                <p class="color-headline">Ứng dụng di động </p>
+                <p class="color-subheadings">App</p>
+              </div>
+            </div>
+            <div id="shortContents-5" class="title-color">
+              Tôi có khả năng phát triển ứng dụng di động cơ bản, sử dụng các công cụ và ngôn ngữ lập trình như Flutter, React Native, hoặc Java/Kotlin cho Android. Tôi có thể tạo ra các ứng dụng với giao diện người dùng thân thiện và chức năng đáp ứng yêu cầu cơ bản
+            </div>
+            <p id="moreContents-5" class="title-color" style="display: none;">
+              Bên cạnh đó, tôi cũng nắm vững quy trình thiết kế giao diện đáp ứng, đảm bảo trải nghiệm người dùng tốt trên các thiết bị di động khác nhau.
+            </p>
+            <div class="card-footer">
+              
+              <p id="readMoreSections-5">
+                <a id="readMoreBtns-5" href="javascript:void(0)">Hiện thêm</a>
+              </p>
+              <p id="hideSections-5" style="display: none;">
+                <a id="hideBtns-5" href="javascript:void(0)">Ẩn đi</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
 
       </div>
     </div>
@@ -240,6 +368,7 @@
     });
   });
   </script>
+  
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const readMoreBtnss = document.getElementById('readMoreBtns-1');
@@ -265,5 +394,132 @@
       });
     });
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const readMoreBtna = document.getElementById('readMoreBtns-2');
+        const hideBtna = document.getElementById('hideBtns-2');
+        const moreContenta= document.getElementById('moreContents-2');
+        const readMoreSectiona = document.getElementById('readMoreSections-2');
+        const hideSectiona = document.getElementById('hideSections-2');
+      
+        // Hiển thị nội dung khi nhấn nút "Hiện thêm"
+        readMoreBtna.addEventListener('click', function(event) {
+          event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+          moreContenta.style.display = 'block'; // Hiển thị nội dung chi tiết
+          hideSectiona.style.display = 'block'; // Hiển thị nút "Ẩn đi"
+          readMoreSectiona.style.display = 'none'; // Ẩn nút "Hiện thêm"
+        });
+      
+        // Ẩn nội dung khi nhấn nút "Ẩn đi"
+        hideBtna.addEventListener('click', function(event) {
+          event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+          moreContenta.style.display = 'none'; // Ẩn nội dung chi tiết
+          hideSectiona.style.display = 'none'; // Ẩn nút "Ẩn đi"
+          readMoreSectiona.style.display = 'block'; // Hiển thị lại nút "Hiện thêm"
+        });
+      });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const readMoreBtnaa = document.getElementById('readMoreBtns-3');
+          const hideBtnaa = document.getElementById('hideBtns-3');
+          const moreContentaa= document.getElementById('moreContents-3');
+          const readMoreSectionaa = document.getElementById('readMoreSections-3');
+          const hideSectionaa = document.getElementById('hideSections-3');
+        
+          // Hiển thị nội dung khi nhấn nút "Hiện thêm"
+          readMoreBtnaa.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            moreContentaa.style.display = 'block'; // Hiển thị nội dung chi tiết
+            hideSectionaa.style.display = 'block'; // Hiển thị nút "Ẩn đi"
+            readMoreSectionaa.style.display = 'none'; // Ẩn nút "Hiện thêm"
+          });
+        
+          // Ẩn nội dung khi nhấn nút "Ẩn đi"
+          hideBtnaa.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+            moreContentaa.style.display = 'none'; // Ẩn nội dung chi tiết
+            hideSectionaa.style.display = 'none'; // Ẩn nút "Ẩn đi"
+            readMoreSectionaa.style.display = 'block'; // Hiển thị lại nút "Hiện thêm"
+          });
+        });
+        </script>
+    <script>
+      function toggleFollow(button) {
+            // Kiểm tra nếu nút đang là "+ Follow"
+            if (button.innerHTML === "+ Follow") {
+              
+                // Thay đổi nội dung thành biểu tượng "fa-check"
+                button.innerHTML = '<i class="fa-solid fa-check"></i>';
+                button.style.backgroundColor = '#007bff'; // Đổi màu nền nếu muốn
+              
+              
+            }
+             else {
+                // Đổi lại thành "+ Follow" nếu nhấp lần nữa
+                button.innerHTML = '+ Follow';
+                button.style.backgroundColor = ''; // Đổi lại màu nền ban đầu
+                message.style.display = 'none';
+            }
+            var alertBox = document.getElementById("customAlert");
+
+        // Thêm class 'show' để hiển thị thông báo
+        alertBox.className = "show";
+
+        // Ẩn thông báo sau 4 giây
+        setTimeout(function(){ alertBox.className = alertBox.className.replace("show", ""); }, 4000);
+        }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const readMoreBtnssa = document.getElementById('readMoreBtns-4');
+        const hideBtnssa = document.getElementById('hideBtns-4');
+        const moreContentssa = document.getElementById('moreContents-4');
+        const readMoreSectionssa = document.getElementById('readMoreSections-4');
+        const hideSectionssa = document.getElementById('hideSections-4');
+      
+        // Hiển thị nội dung khi nhấn nút "Hiện thêm"
+        readMoreBtnssa.addEventListener('click', function(event) {
+          event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+          moreContentssa.style.display = 'block'; // Hiển thị nội dung chi tiết
+          hideSectionssa.style.display = 'block'; // Hiển thị nút "Ẩn đi"
+          readMoreSectionssa.style.display = 'none'; // Ẩn nút "Hiện thêm"
+        });
+      
+        // Ẩn nội dung khi nhấn nút "Ẩn đi"
+        hideBtnssa.addEventListener('click', function(event) {
+          event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+          moreContentssa.style.display = 'none'; // Ẩn nội dung chi tiết
+          hideSectionssa.style.display = 'none'; // Ẩn nút "Ẩn đi"
+          readMoreSectionssa.style.display = 'block'; // Hiển thị lại nút "Hiện thêm"
+        });
+      });
+      </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtnsss = document.getElementById('readMoreBtns-5');
+    const hideBtnsss= document.getElementById('hideBtns-5');
+    const moreContentsss = document.getElementById('moreContents-5');
+    const readMoreSectionsss = document.getElementById('readMoreSections-5');
+    const hideSectionsss = document.getElementById('hideSections-5');
+  
+    // Hiển thị nội dung khi nhấn nút "Hiện thêm"
+    readMoreBtnsss.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+      moreContentsss.style.display = 'block'; // Hiển thị nội dung chi tiết
+      hideSectionsss.style.display = 'block'; // Hiển thị nút "Ẩn đi"
+      readMoreSectionsss.style.display = 'none'; // Ẩn nút "Hiện thêm"
+    });
+  
+    // Ẩn nội dung khi nhấn nút "Ẩn đi"
+    hideBtnsss.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn chặn hành vi mặc định của liên kết
+      moreContentsss.style.display = 'none'; // Ẩn nội dung chi tiết
+      hideSectionsss.style.display = 'none'; // Ẩn nút "Ẩn đi"
+      readMoreSectionsss.style.display = 'block'; // Hiển thị lại nút "Hiện thêm"
+    });
+  });
+  </script>
+    
 </body>
 </html>
