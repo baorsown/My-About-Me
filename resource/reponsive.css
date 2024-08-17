@@ -1,0 +1,41 @@
+/* PC */
+@media (min-width:64em){
+
+}
+/* Tablet&Mobile */
+@media(max-width:63.9375em){
+    
+    
+}
+/* Tablet */
+@media(min-width:46.25em) and (max-width:63.9375em){
+    
+}
+/* Mobile */
+@media(max-width: 46.1875em){
+    #header{
+        overflow: hidden;
+    }
+    
+    .s-ful-width,
+    .s-col-ful{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .s-mt-8{
+        margin-top: 8px;
+    }
+    
+    .content-menu{
+        width: 90%
+    }
+    .name-account{
+        margin-bottom: 40%;
+        
+    }
+    .follow{
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    
+}
